@@ -11,15 +11,13 @@ library(stats)
 
 # Small edit! from class 1!
 
-arr <- array(0,10)
-for (i in 1:10){
-  arr[i] <- if (runif(1) < 0.1) 1 else 0
-}
+number_of_coin_flips <- 10
+number_of_tickets <- 100
 
-for (j in 1:100){
-  arr <- array(0,10)
-  for (i in 1:10){
-    arr[i] <- if (runif(1) < 0.1) 1 else 0
-  }
-  print(arr)
+for (j in 1:number_of_tickets){
+lottery_ticket <- array(0,number_of_coin_flips)
+for (i in 1:number_of_coin_flips){
+  lottery_ticket[i] <- if (runif(1) < 0.1) 1 else 0
+}
+print(lottery_ticket)
 }
